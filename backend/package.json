@@ -1,0 +1,19 @@
+{
+    "name": "microfrontend-demo-backend",
+    "private": true,
+    "main": "src/index.js",
+    "scripts": {
+        "dev": "npx nodemon src/index.js",
+        "prod": "node src/index.js"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.17.2",
+        "html-minifier-terser": "^7.0.0-alpha.1",
+        "juice": "^8.0.0",
+        "node-fetch": "^2.6.6"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.15"
+    }
+}

@@ -1,0 +1,85 @@
+version: "1.0" # version of the OpenMFE spec
+
+name: Hotel Offers
+icon: ./icon.svg
+tag: hotel-offers
+url:
+  frontend: ../main.js
+  prerender: __BACKEND_URL__/prerender
+  semantic: __BACKEND_URL__/semantic
+publisher:
+  name: Alexander Günsche
+  email: uni@lxg.de
+description: This is a microfrontend for displaying a hotel. The microfrontend shows the title, an image and a description. The microfrontend contains an “add to wishlist” button, which when clicked will fire the `hotel-offers.add-to-wishlist` event.
+documentation: documentation.md
+
+attributes:
+  - name: region
+    description: The Giata ID of the region for which hotels should be displayed.
+    required: true
+    schema:
+      type: string
+      pattern: "^[a-z0-9]+$"
+
+events:
+  - name: hotel-offers.add-to-wishlist
+    description: Indicates that the user wants to add the hotel to the wishlist.
+    schema:
+      type: object
+      properties:
+        id:
+          type: string
+          description: The ID of the hotel.
+          pattern: ^[a-z0-9]+$
+        name:
+          type: string
+          description: The name of the hotel.
+        image:
+          type: string
+          description: An URL to a preview image of the hotel.
+          format: uri
+  - name: openmfe.tracking
+    tracking: hotel-offers.preview-opened
+    description: Indicates that the preview of a hotel image was opened.
+    schema:
+      type: object
+      properties:
+        id:
+          type: string
+          description: The ID of the hotel.
+          pattern: ^[a-z0-9]+$
+        name:
+          type: string
+          description: The name of the hotel.
+        image:
+          type: string
+          description: An URL to a preview image of the hotel.
+          format: uri
+  - name: openmfe.tracking
+    tracking: hotel-offers.preview-closed
+    description: Indicates that the preview of a hotel image was closed.
+    schema:
+      type: object
+      properties:
+        id:
+          type: string
+          description: The ID of the hotel.
+          pattern: ^[a-z0-9]+$
+        name:
+          type: string
+          description: The name of the hotel.
+        image:
+          type: string
+          description: An URL to a preview image of the hotel.
+          format: uri
+
+examples:
+  - description: Shows a selection of hotels on the island of Mallorca.
+    attributes:
+      region: "1197"
+  - description: Shows a selection of hotels on the island of Crete.
+    attributes:
+      region: "1177"
+  - description: Shows a selection of hotels on the island of Tenerife.
+    attributes:
+      region: "1643"
