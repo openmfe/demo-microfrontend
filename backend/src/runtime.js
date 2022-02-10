@@ -1,8 +1,8 @@
-const backend = require('./backend.js')
+const data = require('./data.js')
 
 module.exports = async function({ region })
 {
-    const hotels = await backend({ region })
+    const hotels = await data({ region })
 
     // useful for performance checks to simulate the response time delay of the original API
     if (process.env.MFE_BACKEND_DELAY) {

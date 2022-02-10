@@ -1,12 +1,12 @@
-const backend = require('./backend.js')
+const data = require('./data.js')
 
 module.exports = async function({ region })
 {
-    const data = await backend({ region })
+    const hotels = await data({ region })
 
     return {
         "@context": "http://schema.org",
-        "@graph": data.map(hotel => ({
+        "@graph": hotels.map(hotel => ({
             "@type" : "Hotel",
             "@id": hotel.code,
             name: hotel.title,
