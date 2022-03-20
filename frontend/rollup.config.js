@@ -29,10 +29,10 @@ export default {
         }),
         copy({
             targets: [
-                { src: ['src/manifest', 'src/fonts', 'src/index.html'], dest: 'dist' },
+                { src: ['src/openmfe', 'src/fonts', 'src/index.html'], dest: 'dist' },
                 {
-                    src: 'src/manifest/openmfe.yaml',
-                    dest: 'dist/manifest',
+                    src: 'src/openmfe/openmfe.yaml',
+                    dest: 'dist/openmfe',
                     transform: contents => contents.toString()
                         .replace(/__BACKEND_URL__/g, process.env.MFE_BACKEND_URL)
                         .replace(/__FRONTEND_URL__/g, process.env.MFE_FRONTEND_URL)
