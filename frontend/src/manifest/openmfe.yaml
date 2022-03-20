@@ -83,3 +83,5 @@ examples:
   - description: Shows a selection of hotels on the island of Tenerife.
     attributes:
       region: "1643"
+
+repository: https://gitlab.com/openmfe/demo/microfrontend.git
