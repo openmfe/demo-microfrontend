@@ -7,7 +7,7 @@ module.exports = async function({ region })
             <style>
                 .main               { all: initial; display: block; overflow: hidden; }
                 .card               { border: 1px solid #aaa; border-radius: 5px; padding: 10px; max-width: 250px;
-                                      float: left; margin: 0 20px 20px 0; }
+                                      float: left; margin: 0 20px 20px 0; box-sizing: content-box }
                 .card:last-child    { margin: 0 }
                 .h1                 { margin: 0 0 1rem; height: 45px; background: #ddd; }
                 .img                { width: 250px; height: 187px; color: #fff; display: flex; flex-direction: column;
