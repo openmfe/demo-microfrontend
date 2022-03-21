@@ -9,7 +9,7 @@ url:
   semantic: __BACKEND_URL__/semantic
 publisher:
   name: Alexander Günsche
-  email: uni@lxg.de
+  email: research@lxg.de
 description: This is a microfrontend for displaying a hotel. The microfrontend shows the title, an image and a description. The microfrontend contains an “add to wishlist” button, which when clicked will fire the `hotel-offers.add-to-wishlist` event.
 documentation: documentation.md
 
