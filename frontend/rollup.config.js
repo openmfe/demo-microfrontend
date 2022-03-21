@@ -31,7 +31,7 @@ export default {
             targets: [
                 { src: ['src/openmfe', 'src/fonts', 'src/index.html'], dest: 'dist' },
                 {
-                    src: 'src/openmfe/openmfe.yaml',
+                    src: 'src/openmfe/manifest.yaml',
                     dest: 'dist/openmfe',
                     transform: contents => contents.toString()
                         .replace(/__BACKEND_URL__/g, process.env.MFE_BACKEND_URL)
