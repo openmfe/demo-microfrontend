@@ -128,7 +128,7 @@ class HotelOffers extends HTMLElement
                 data
             }
 
-            name = 'openmfe.tracking'
+            name = 'openmfe.analytics'
         }
 
         this.dispatchEvent(new CustomEvent(name, {

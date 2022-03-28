@@ -38,7 +38,7 @@ events:
           type: string
           description: An URL to a preview image of the hotel.
           format: uri
-  - name: openmfe.tracking
+  - name: openmfe.analytics
     tracking: hotel-offers.preview-opened
     description: Indicates that the preview of a hotel image was opened.
     schema:
@@ -55,7 +55,7 @@ events:
           type: string
           description: An URL to a preview image of the hotel.
           format: uri
-  - name: openmfe.tracking
+  - name: openmfe.analytics
     tracking: hotel-offers.preview-closed
     description: Indicates that the preview of a hotel image was closed.
     schema:
